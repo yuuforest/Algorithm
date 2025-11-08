@@ -19,16 +19,14 @@ def solution():
 
     distance = [1e9] * (N+1)
 
-def bfs(N, M, edges, node):
+def bellman_ford(N, M, edges, node):
 
     distance = [1e9] * (N+1)
     distance[node] = 0
 
     for n in range(N):
         for m in range(M):
-            cn = edges[m][0]
-            nn = edges[m][1]
-            cost = edges[m][2]
+            info = edges[m]
 
             
 
