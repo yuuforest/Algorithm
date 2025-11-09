@@ -10,9 +10,19 @@ import sys
 def solution():
     input = sys.stdin.readline
 
-    N = input()
+    N = input().rstrip()
+    N_len = len(N)
 
+    answer = 0
     
+    for temp in ["c=", "c-", "dz=", "d-", "lj", "nj", "s=", "z="]:
+        if temp in N:
+            answer += 1
+            N_len -= len(temp)
 
-solution()
+    answer += N_len
+
+    return answer
+
+print(solution())
 
